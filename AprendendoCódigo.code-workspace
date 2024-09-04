@@ -19,10 +19,6 @@
 		{
 			"name": "javascript",
 			"path": "javascript"
-		},
-		{
-			"name": "Programação",
-			"path": "."
 		}
 	],
 	"settings": {
