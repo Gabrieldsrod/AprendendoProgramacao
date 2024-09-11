@@ -47,7 +47,8 @@
 			"stdexcept": "c",
 			"system_error": "c",
 			"typeinfo": "c",
-			"utility": "c"
+			"utility": "c",
+			"cstdlib": "c"
 		},
 		"liveServer.settings.multiRootWorkspaceName": "html-css"
 	}
