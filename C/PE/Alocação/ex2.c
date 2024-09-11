@@ -26,19 +26,18 @@ int main()
 
     printf("\n\nNumeros em ordem inversa:\n");
     ordemInversa(ptr, qntd);
-    
+
     return 0;
 }
 
 void aloca(float **p, int tam)
 {
-    if((*p = (float *)realloc(*p, tam*sizeof(float))) == NULL) //importanta
+    if ((*p = (float *)realloc(*p, tam*sizeof(float))) == NULL) // importante
     {
         printf("Erro na alocacao!");
         exit(1);
     }
     printf("Funcao aloca - Endereco: %p", *p); //%p ponteiro(hexadecimal)  %u numero inteiro sem sinal
-
 }
 
 void ordemInversa(float *p, int tam)
