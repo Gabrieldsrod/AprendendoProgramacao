@@ -24,7 +24,7 @@ int main()
     printf("\n\n");
     recebe(ptr, qntd);
 
-    printf("\n\nNumeros em ordem inversa:\n");
+    printf("\nNumeros em ordem inversa:\n");
     ordemInversa(ptr, qntd);
 
     return 0;
