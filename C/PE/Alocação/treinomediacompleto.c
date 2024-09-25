@@ -26,7 +26,8 @@ int main() {
         printf("\n\nDeseja continuar? <S/N>:");
         scanf("%c", &op);
         fflush(stdin);
-        printf("\n");        
+        printf("\n");
+
     } while (op != 'n' && op != 'N');
 
     system("cls");
