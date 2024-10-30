@@ -48,7 +48,11 @@
 			"system_error": "c",
 			"typeinfo": "c",
 			"utility": "c",
-			"cstdlib": "c"
+			"cstdlib": "c",
+			"stdlib.h": "c",
+			"iterator": "c",
+			"xhash": "c",
+			"xutility": "c"
 		},
 		"liveServer.settings.multiRootWorkspaceName": "html-css"
 	}

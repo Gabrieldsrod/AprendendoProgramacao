@@ -180,7 +180,7 @@ void media(aluno *p)
 
     for (i = 0; i < 2; i++)
     {
-        soma += p->nota[i];
+        soma += *(p->nota + i);
     }
 
     soma /= 2;
