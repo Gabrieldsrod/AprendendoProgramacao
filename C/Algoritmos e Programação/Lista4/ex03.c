@@ -1,4 +1,4 @@
-//Receber 10 números e informar se cada um deles é negativo, positivo ou nulo.
+//Receber 10 nï¿½meros e informar se cada um deles ï¿½ negativo, positivo ou nulo.
 
 #include <stdio.h>
 
@@ -7,7 +7,7 @@ main()
 	int i;
 	int num;
 	
-	for (i = 1; i <= 10; i++)
+	for (i = 0; i < 10; i++)
 	{
 		printf("Digite um numero: ");
 		scanf("%i", &num);
@@ -28,4 +28,13 @@ main()
 		}
 	}
 }
+
+
+// estrutura bÃ¡sica ded for
+
+// int i;    //lembrar de inicializar o i
+// for (i = 0; i < "quantidade"; i++)
+// {
+// 		codigo
+// }
 

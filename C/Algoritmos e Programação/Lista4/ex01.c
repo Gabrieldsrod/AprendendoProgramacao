@@ -1,4 +1,4 @@
-//Receber 10 números e mostrar o dobro de cada um deles.
+//Receber 10 nï¿½meros e mostrar o dobro de cada um deles.
 
 #include <stdio.h>
 

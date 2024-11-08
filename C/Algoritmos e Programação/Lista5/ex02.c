@@ -9,7 +9,7 @@ int main ()
     int i;
 
     printf("Digite 10 numeros:\n");
-    for (i=1;i<=10;i++)
+    for (i=0;i<10;i++)
     {
         scanf("%i", &num);
 
