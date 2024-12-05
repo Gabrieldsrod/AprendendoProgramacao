@@ -74,7 +74,8 @@ int main()
 
         case 4:
             mostra_hospede(ph);
-        }
+            break;
+        } // switch
     } while (op != 5);
 } // main
 
@@ -114,11 +115,11 @@ int verifica_hospede()
     else
     {
         fseek(fh, 0, 2); // posiciona o ponteiro fh no final
-        qtde = ftell(fh) / sizeof(quarto);
+        qtde = ftell(fh) / sizeof(hospede);
         fclose(fh);
         return qtde;
     } // else
-} // verifica_quarto
+} // verifica_hospede
 
 void cadastra_quarto(quarto *q, int qq)
 {
@@ -253,7 +254,7 @@ int busca_quarto(quarto *q, int qq, char cat)
         printf("\nErro\n\n");
     else
     {
-        for (i = 0; i < 11; i++)
+        for (i = 0; i < qq; i++)
         {
             fseek(fq, i * sizeof(quarto), 0);
             fread(q, sizeof(quarto), 1, fq);
@@ -318,7 +319,7 @@ void check_out(hospede *h, quarto *q)
         else
             valor = h->dias * ((h->acompanhante) + 1) * 65;
         
-        printf("\nNome: %s\nAcompanhantes: %i\n Categoria: %c\nDias: %i\nCalor a ser pago: R$ %.2f\n\n", h->nome, h->acompanhante, h->categoria, h->dias, valor);
+        printf("\nNome: %s\nAcompanhantes: %i\nCategoria: %c\nDias: %i\nCalor a ser pago: R$ %.2f\n\n", h->nome, h->acompanhante, h->categoria, h->dias, valor);
         atualiza_quarto(q, n_quarto);
     } // else
     system("pause");
@@ -337,7 +338,7 @@ void mostra_quarto(quarto *q)
         {
             fseek(fq, i * sizeof(quarto), 0);
             fread(q, sizeof(quarto), 1, fq);
-            printf("\nQuarto: %i\nCategoria: %c\nStatus: %c\n\n", q->num, q->categoria, q->status);
+            printf("\nQuarto: %i\nCategoria: %c\nStatus: %c\n", q->num, q->categoria, q->status);
         } // for
         fclose(fq); // dentro do else por conta do rb
     } // else
@@ -348,16 +349,16 @@ void mostra_hospede(hospede *h)
 {
     int i, qh;
     FILE *fh = NULL;
-    qh = verifica_quarto();
-    if((fh = fopen("quartos.bin", "rb")) == NULL)
+    qh = verifica_hospede();
+    if((fh = fopen("hospedes.bin", "rb")) == NULL)
         printf("\nArquivo Inexistente\n\n");
     else
     {
         for (i = 0; i < qh; i++)
         {
-            fseek(fh, i * sizeof(quarto), 0);
-            fread(fh, sizeof(quarto), 1, fh);
-            printf("\nQuarto: %i\nNome: %s\nAcompanhantes: %i\nCategoria: %c\nDias: %i\n\n", h->quarto, h->nome, h->acompanhante, h->categoria, h->dias);
+            fseek(fh, i * sizeof(hospede), 0);
+            fread(h, sizeof(hospede), 1, fh);
+            printf("\nQuarto: %i\nNome: %s\nAcompanhantes: %i\nCategoria: %c\nDias: %i\n", h->quarto, h->nome, h->acompanhante, h->categoria, h->dias);
         } // for
         fclose(fh); // dentro do else por conta do rb
     } // else
