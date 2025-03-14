@@ -52,7 +52,8 @@
 			"stdlib.h": "c",
 			"iterator": "c",
 			"xhash": "c",
-			"xutility": "c"
+			"xutility": "c",
+			"cmath": "c"
 		},
 		"liveServer.settings.multiRootWorkspaceName": "html-css"
 	}

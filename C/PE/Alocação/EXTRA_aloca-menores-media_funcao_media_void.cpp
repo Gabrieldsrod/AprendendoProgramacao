@@ -46,7 +46,7 @@ void media(float *p, int tam, float **pm, int *qm)
   int i;
   float m = 0;
   for (i = 0; i < tam; i++)
-  m += *(p + i);
+    m += *(p + i);
   m /= tam;
   printf("\nMedia = %.2f\n\n", m);
   for (i = 0; i < tam; i++)
