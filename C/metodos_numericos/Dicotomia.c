@@ -101,7 +101,7 @@ void recebeMulti(float *p, int i)
 {
     printf("Informe o fator multiplicador de x^%i(%c): ", i, 65 + (grau - i));
     scanf("%f", p);
-    while (getchar() != '\n');
+    fflush(stdin);
 }
 
 float calculaK(float a, float b, float erro)
@@ -127,7 +127,7 @@ float funcaoX(float ponto)
 void imprimirCabecalhoTabela()
 {
     printf("I |\ta\t|\tb\t|\tm\t|\tf(a)\t|\tf(b)\t|\tf(m)\t|fa*fm\t|fm*fb\t|\n");
-    printf("--+-------+-------+-------+-------+-------+-------+-------+-------+\n");
+    printf("--+-------------+---------------+---------------+---------------+---------------+---------------+-------+-------+\n");
 }
 
 void imprimirTabela(int iteracao, float a, float b, float m, float fA, float fB, float fM, char fAfM, char fMfB)
