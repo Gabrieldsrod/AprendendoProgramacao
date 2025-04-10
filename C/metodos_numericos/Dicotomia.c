@@ -25,14 +25,14 @@ int main()
     {
         recebeMulti(multi + i, i);
     }
-    
+
     printf("A funcao recebida foi: ");
     for (i = grau; i >= 0; i--)
     {
         if (i == 0)
-        printf("%.2f = 0", *(multi + i));
+            printf("%.2f = 0", *(multi + i));
         else
-        printf("%.2f*x^%d + ", *(multi + i), i);
+            printf("%.2f*x^%d + ", *(multi + i), i);
     }
     printf("\n\n");
     printf("Valor de A: ");
@@ -45,10 +45,11 @@ int main()
     fA = funcaoX(A);
     fB = funcaoX(B);
 
-    if (fA * fB > 0) {
+    if (fA * fB > 0)
+    {
         printf("Nao existe raiz no intervalo fornecido.\n");
         free(multi);
-        return 1;
+        break;
     }
 
     k = calculaK(A, B, erro);
@@ -69,10 +70,11 @@ int main()
             fMfB = '-';
         else
             fMfB = '+';
-        
+
         imprimirTabela(iteracao, A, B, M, fA, fB, fM, fAfM, fMfB);
 
-        if (fabs(B - A) < erro || fabs(fM) < erro || fM == 0) {
+        if (fabs(B - A) < erro || fabs(fM) < erro || fM == 0)
+        {
             printf("Criterio de parada atingido.\n");
             break;
         }

@@ -20,7 +20,7 @@ int main()
 
     printf("Informe o grau da funcao (2 a 6): ");
     scanf("%i", &grau);
-    alocaMulti(&multi, grau + 1); // Alocar memória para todos os coeficientes de uma vez
+    alocaMulti(&multi, grau + 1); 
     for (i = grau; i >= 0; i--)
     {
         recebeMulti(multi + i, i);
@@ -45,13 +45,20 @@ int main()
     fA = funcaoX(A);
     fB = funcaoX(B);
 
-    if (fA * fB > 0) {
-        printf("Nao existe raiz no intervalo fornecido.\n");
-        free(multi);
-        return 1;
+    while (fA * fB > 0) {
+        printf("\nNao existe raiz no intervalo fornecido.\n");
+        printf("Por favor, insira um novo intervalo.\n");
+        printf("Valor de A: ");
+        scanf("%f", &A);
+        printf("Valor de B: ");
+        scanf("%f", &B);
+        fA = funcaoX(A);
+        fB = funcaoX(B);
     }
+    
+    int NumIteracoes = calculaK(A, B, erro);
+    printf("Numero min. de iteracoes: %i \n\n", NumIteracoes);
 
-    calculaK(A, B, erro);
     imprimirCabecalhoTabel();
 
     iteracao = 1;
@@ -74,7 +81,8 @@ int main()
         imprimirTabela(iteracao, A, B, M, fA, fB, fM, fAfM, fMfB);
 
         if (fabs(B - A) < erro || fabs(fM) < erro || fM == 0) {
-            printf("Criterio de parada atingido.\n");
+            printf("\nCriterio de parada atingido...\n");
+            printf("Raiz aproximada: %.5f\n", M);
             break;
         }
 
@@ -109,10 +117,12 @@ void recebeMulti(float *p, int i)
 
 float calculaK(float a, float b, float erro)
 {
-    float fValorK;
+    float ValorK;
 
-    fValorK = (log10(b - a) - log10(erro)) / (log10(2));
-    return ceil(fValorK);
+     ValorK = (log10(b - a) - log10(erro)) / (log10(2));
+    printf("\nValor aproximado de K: %.2f\n", ValorK);
+
+    return ceil(ValorK);
 }
 
 float funcaoX(float ponto)
