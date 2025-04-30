@@ -11,6 +11,9 @@
 		{
 			"name": "html-css",
 			"path": "html-css"
+		},
+		{
+			"path": "java"
 		}
 	],
 	"settings": {
