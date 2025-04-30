@@ -5,20 +5,12 @@
 			"path": "Python"
 		},
 		{
-			"name": "PycharmProjects",
-			"path": "../../../PycharmProjects"
-		},
-		{
 			"name": "C",
 			"path": "C"
 		},
 		{
 			"name": "html-css",
 			"path": "html-css"
-		},
-		{
-			"name": "javascript",
-			"path": "javascript"
 		}
 	],
 	"settings": {
