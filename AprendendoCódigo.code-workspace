@@ -15,10 +15,6 @@
 		{
 			"name": "html-css",
 			"path": "html-css"
-		},
-		{
-			"name": "javascript",
-			"path": "javascript"
 		}
 	],
 	"settings": {
