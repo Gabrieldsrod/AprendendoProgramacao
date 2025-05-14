@@ -1,10 +1,7 @@
-/*
- * Nome: Gabriel da Silva Rodrigues, Isabella Valim de Carvalho, João Vitor Rodrigues Martinelle Vieira, Luiza Mantovani
- * RA: 248103
- * Programa: Ajuste de Curvas com Mínimos Quadrados e Eliminação de Gauss
- * Descrição: Calcula o polinômio que melhor se ajusta a um conjunto de dados utilizando
- *            o método dos mínimos quadrados e resolve o sistema linear por eliminação de Gauss.
- */
+// Gabriel da Silva Rodrigues - 248103
+// Isabella Valim de Carvalho - 247499
+// Joao Vitor Rodrigues Martinelle Vieira - 248194
+// Luiza Mantovani - 248122
 
 #include <stdio.h>
 #include <stdlib.h>
