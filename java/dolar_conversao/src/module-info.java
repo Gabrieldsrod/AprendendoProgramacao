@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module dolar_conversao {
-}

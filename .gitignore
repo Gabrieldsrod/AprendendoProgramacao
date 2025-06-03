@@ -1,0 +1,51 @@
+# Ignorar arquivos e pastas de IDEs
+.vscode/
+*.code-workspace
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignorar arquivos e pastas de Java
+*.class
+*.jar
+*.war
+*.ear
+bin/
+
+# Ignorar arquivos e pastas de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+*.egg-info/
+output/
+
+# Ignorar arquivos e pastas de Web
+node_modules/
+dist/
+build/
+*.log
+*.tmp
+*.cache
+*.DS_Store
+
+# Ignorar arquivos e pastas comuns
+Thumbs.db
+.DS_Store
+
+# Ignorar arquivos de backup
+*~
+*.bak
+*.swp
+*.swo
+
+# Ignorar arquivos de configuração de editor
+*.iml
+*.ipr
+*.iws
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
